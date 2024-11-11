@@ -1,5 +1,6 @@
 import EmberRouter from '@ember/routing/router';
 import config from 'ember-quickstart/config/environment';
+import { signInWithPopup, GoogleAuthProvider, getAuth, signOut, onAuthStateChanged, authStateReady } from 'firebase/auth';
 
 export default class Router extends EmberRouter {
   location = config.locationType;
@@ -20,9 +21,18 @@ Router.map(function () {
       });
     });
   });
-  this.route('albums');
 
   this.route('album', {
     path: '/albums/:album_id',
   });
+  this.route('albums');
+
+  this.route('test', {
+    path: 'test/:test_id',
+  });
+
+  this.route('notfound', {
+    path: '/*route',
+  });
+  this.route('debgging');
 });
