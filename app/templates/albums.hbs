@@ -1,0 +1,10 @@
+{{page-title "Albums"}}
+<h1>Albums</h1>
+<h2>Click to edit</h2>
+<ClickToEdit></ClickToEdit>
+<h2>Albums</h2>
+<ul>
+  {{#each @model as |album|}}
+      <li><LinkTo @route="albums">{{album.title}}</LinkTo></li>
+  {{/each}}
+</ul>
