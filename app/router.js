@@ -1,6 +1,5 @@
 import EmberRouter from '@ember/routing/router';
 import config from 'ember-quickstart/config/environment';
-import { signInWithPopup, GoogleAuthProvider, getAuth, signOut, onAuthStateChanged, authStateReady } from 'firebase/auth';
 
 export default class Router extends EmberRouter {
   location = config.locationType;
